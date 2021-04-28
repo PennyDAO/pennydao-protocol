@@ -26,11 +26,12 @@ networks:
 compiler:
   evm_version: null
   solc:
-    version: null
+    version: 0.8.3
     optimizer:
       enabled: true
       runs: 200
-    remappings: null
+    remappings:
+      - openzeppelin=OpenZeppelin/openzeppelin-contracts@4.0.0
   vyper:
     version: null
 
@@ -57,5 +58,6 @@ hypothesis:
     shrink: true
 
 autofetch_sources: false
-dependencies: null
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@4.0.0
 dev_deployment_artifacts: false
