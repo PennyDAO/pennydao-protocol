@@ -53,4 +53,4 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Tests
-        run: brownie test -n auto -w --stateful ${{ matrix.stateful }}
+        run: brownie test --stateful ${{ matrix.stateful }}

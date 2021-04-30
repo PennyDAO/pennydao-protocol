@@ -14,3 +14,8 @@ def bob(accounts):
 @pytest.fixture(scope="module")
 def pennydao(alice, PennyDAO):
     return alice.deploy(PennyDAO, "Some URI")
+
+
+@pytest.fixture(autouse=True)
+def function_isolation(fn_isolation):
+    pass
